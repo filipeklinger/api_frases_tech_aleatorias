@@ -1,0 +1,17 @@
+{
+  "name": "api_frases_tech_aleatorias",
+  "version": "1.0.0",
+  "description": "uma api que retorna frases aleatorias de tecnologia",
+  "main": "index.js",
+  "repository": "https://github.com/filipeklinger/api_frases_tech_aleatorias.git",
+  "author": "Filipe Klinger <filipeklinger@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
