@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "incremental": true,
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "strictNullChecks": true,
+    "resolveJsonModule": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmitOnError": true,
+    "outDir": "build",
+    "lib": []
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

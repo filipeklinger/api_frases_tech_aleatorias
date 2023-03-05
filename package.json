@@ -8,10 +8,15 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "node index.js",
+    "prestart": "tsc",
+    "start": "node ./build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.14.6"
   }
 }
