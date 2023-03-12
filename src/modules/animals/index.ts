@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-import { CatRepository } from "../../repository/catRepository";
 import { CatModule } from "./catModule";
 
 //controller class
