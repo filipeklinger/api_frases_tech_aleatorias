@@ -2,6 +2,7 @@ import { Router } from "express";
 import * as cors from 'cors';
 import * as numberController from "../modules/numbers";
 import * as animalController from "../modules/animals";
+import { asyncHandler } from "../middlewares/asyncHandler";
 
 const router = Router();
 
@@ -10,8 +11,8 @@ router.get('/', function (req, res) {
     res.send({ msg: 'OK' });
 });
 
-router.get('/numbers', numberController.showOk);
+router.get('/numbers', asyncHandler(numberController.showOk));
 
-router.get('/animals', animalController.showOk);
-router.get('/animals/cat', animalController.catPhrase);
+router.get('/animals', asyncHandler(animalController.showOk));
+router.get('/animals/cat', asyncHandler(animalController.catPhrase));
 export default router;
