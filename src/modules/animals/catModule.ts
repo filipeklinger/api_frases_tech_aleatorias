@@ -1,5 +1,5 @@
 import { ValidateError } from "../../errorTypes/validadeError";
-import { CatRepository } from "../../repository/catRepository";
+import { CatRepository } from "../../repository/cat/catRepository";
 
 export class CatModule {
     private cRepo: CatRepository;
