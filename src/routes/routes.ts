@@ -13,7 +13,7 @@ router.get('/', function (req, res) {
 
 router.get('/numbers', asyncHandler(numberController.showOk));
 
-router.get('/animals', asyncHandler(animalController.showOk));
-router.get('/animals/cat', asyncHandler(animalController.catPhrase));
-router.get('/animals/dog', asyncHandler(animalController.dogPhrase));
+router.get('/animals', asyncHandler(animalController.showAnimals));
+router.get('/animals/cat', asyncHandler(animalController.catFacts));
+router.get('/animals/dog', asyncHandler(animalController.dogFacts));
 export default router;

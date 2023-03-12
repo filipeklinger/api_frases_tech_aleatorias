@@ -8,12 +8,12 @@ export class CatModule {
         this.cRepo = new CatRepository();
     }
 
-    public getPhrase(filter: { id: number }) {
+    public getFact(filter: { id: number }) {
         let f: { fact: string; id: number; };
 
         if (filter.id) {
             this.validateFilter(filter, this.cRepo.maxIndex());
-            f = this.cRepo.getPhrase(filter.id);
+            f = this.cRepo.getFact(filter.id);
         }
         else
             f = this.cRepo.getRandomPhrase();

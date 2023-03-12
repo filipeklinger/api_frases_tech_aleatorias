@@ -3,20 +3,20 @@ import { CatModule } from "./catModule";
 import { DogModule } from "./dogModule";
 
 //controller class
-export const showOk = async (req: Request, res: Response) => {
-    res.json({ "status": "ok" });
+export const showAnimals = async (req: Request, res: Response) => {
+    res.json(["cat", "dog"]);
 };
 
-export const catPhrase = async (req: Request, res: Response) => {
+export const catFacts = async (req: Request, res: Response) => {
     const filter = <unknown>req.query as { id: number };
     const catModule = new CatModule();
-    const response = catModule.getPhrase(filter);
+    const response = catModule.getFact(filter);
     res.json(response);
 };
 
-export const dogPhrase = async (req: Request, res: Response) => {
+export const dogFacts = async (req: Request, res: Response) => {
     const filter = <unknown>req.query as { id: number };
     const catModule = new DogModule();
-    const response = catModule.getPhrase(filter);
+    const response = catModule.getFact(filter);
     res.json(response);
 };

@@ -11,7 +11,7 @@ export class DogRepository {
     return { fact: f, id: index }
   }
 
-  public getPhrase(index: number) {
+  public getFact(index: number) {
     const f = facts[index];
     return { fact: f, id: index };
   }
