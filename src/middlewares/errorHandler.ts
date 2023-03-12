@@ -7,8 +7,10 @@ export function errorHandler(error: Error | undefined, req: Request, res: Respon
         return;
     }
     const parsed = errorParser(error);
-    console.error(parsed.stack);
-    console.log(parsed.body);
+    if (parsed.stack) {
+        console.error(parsed.stack);
+        console.log(parsed.body);
+    }
 
     if (res.headersSent) { return next(parsed); }
     if (error) {
