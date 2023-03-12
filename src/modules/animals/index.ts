@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { CatRepository } from "../../repository/catRepository";
+import { CatModule } from "./catModule";
 
 //controller class
 export const showOk = async (req: Request, res: Response) => {
@@ -7,7 +8,8 @@ export const showOk = async (req: Request, res: Response) => {
 };
 
 export const catPhrase = async (req: Request, res: Response) => {
-    const cRepo = new CatRepository();
-    const fact = cRepo.getRandomPhrase();
-    res.json({ fact: fact });
+    const filter = <unknown>req.query as { id: number };
+    const catModule = new CatModule();
+    const response = catModule.getPhrase(filter);
+    res.json(response);
 };

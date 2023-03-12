@@ -1,8 +1,19 @@
 import { randomIndex } from "../utils/randomUtils";
 
 export class CatRepository {
+
+    public maxIndex() {
+        return facts.length - 1;
+    }
     public getRandomPhrase() {
-        return facts[randomIndex(facts)];
+        const index = randomIndex(facts)
+        const f = facts[index];
+        return { fact: f, id: index }
+    }
+
+    public getPhrase(index: number) {
+        const f = facts[index];
+        return { fact: f, id: index };
     }
 }
 
